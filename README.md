@@ -17,6 +17,25 @@ Evaluar el desempeño de 4 tiendas basándose en datos reales de ventas, satisfa
 ## Pasos Realizados.
 
 1.  **Carga de Datos**: Importación de archivos CSV mediante Pandas.
+
+### Metodología de Análisis de Datos
+
+Para garantizar la fiabilidad de los resultados, se ejecutó un proceso de validación y limpieza en cuatro etapas:
+
+### i). Auditoría de Estructura
+* **Validación de dimensiones:** Se confirmaron las dimensiones de cada base (Tiendas 1, 2 y 3 con 2,360 registros; Tienda 4 con 2,359).
+* **Consistencia de columnas:** Se verificó que las 4 fuentes compartieran exactamente el mismo esquema de datos para permitir la integración.
+
+### ii). Diagnóstico de Salud (Data Quality)
+   Se implementó un script de auditoría que confirmó:
+   * **Integridad:** 0% de valores nulos en todas las columnas críticas.
+   * **Unicidad:** Ausencia total de registros duplicados en los conjuntos de datos.
+   * **Lógica de Negocio:** Validación de la columna `Precio` (100% de valores positivos) y consistencia en el catálogo de ciudades.
+
+### iii). Procesamiento y Limpieza
+   * **Normalización de Fechas:** Conversión de formatos temporales para asegurar un rango consistente entre el **01/01/2020** y el **31/03/2023**.
+   * **Estandarización:** Ajuste de nombres y nomenclaturas para la consolidación final.
+
 2.  **Análisis de Métricas**: 
     * Cálculo de ingresos totales por tienda.
     * Identificación de categorías y productos más vendidos.
